@@ -1,6 +1,5 @@
 import Bio from "../Components/Bio";
 import CV from "../Components/CV";
-import CurrListening from "../Components/CurrListening";
 import AudioPlayer from "../Components/AudioPlayer.jsx";
 import Email from "../Components/Email";
 import Location from "../Components/Location";
@@ -34,17 +33,17 @@ const Home = ({ toggleDarkMode }) => {
       <TwitterCard />
 
       {/* row 4  */}
-      <div className=" row-start-4 col-span-2  bg-red-400">10</div>
-      <div className=" row-start-4 col-span-1  bg-red-400">11</div>
-      <div className=" row-start-4 col-span-1 row-span-2 bg-red-400">12</div>
+      <div className=" row-start-4 col-span-2  bg-slate-500 rounded-3xl p-4">10</div>
+      <div className=" row-start-4 col-span-1  bg-slate-500 rounded-3xl p-4">11</div>
+      <div className=" row-start-4 col-span-1 row-span-2 bg-slate-500 rounded-3xl p-4">12</div>
 
       {/* row 5  */}
-      <div className=" row-start-5 col-span-1  bg-red-400">13</div>
-      <div className=" row-start-5 col-span-2  bg-red-400">14</div>
+      <div className=" row-start-5 col-span-1  bg-slate-500 rounded-3xl p-4">13</div>
+      <div className=" row-start-5 col-span-2  bg-slate-500 rounded-3xl p-4">14</div>
 
       {/* row 6  */}
-      <div className=" row-start-6 col-span-2  bg-red-400">15</div>
-      <div className=" row-start-6 col-span-1  bg-red-400">16</div>
+      <div className=" row-start-6 col-span-2  bg-slate-500 rounded-3xl p-4">15</div>
+      <div className=" row-start-6 col-span-1  bg-slate-500 rounded-3xl p-4">16</div>
       <AudioPlayer />
     </div>
   );
