@@ -22,7 +22,7 @@ const LinkedinIcon = () => {
   return (
     <div
       id="linkedin-container"
-      className="row-start-2 col-span-1 rounded-3xl flex justify-center items-center"
+      className="row-start-2 col-span-1 rounded-3xl bg-stone-100 flex justify-center items-center"
     ></div>
   );
 };
