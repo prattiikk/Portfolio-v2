@@ -1,27 +1,32 @@
-import { useEffect } from 'react';
-import lottie from 'lottie-web';
-import animationData from '../../assets/github-icon.json'; // Replace with the actual path
+import { useEffect } from "react";
+import lottie from "lottie-web";
+import animationData from "../../assets/icons/github-icon.json"; 
 
 const GitIcon = () => {
-    useEffect(() => {
-        // Set up the Lottie animation
-        const animationContainer = document.getElementById('lottie-container');
+  useEffect(() => {
+    const animationContainer = document.getElementById("lottie-container");
 
-        lottie.loadAnimation({
-            container: animationContainer,
-            animationData: animationData,
-            loop: true,
-            autoplay: true,
-        });
+    lottie.loadAnimation({
+      container: animationContainer,
+      animationData: animationData,
+      loop: true,
+      autoplay: true,
+    });
 
-        return () => {
+    return () => {
+      lottie.destroy();
+    };
+  }, []);
 
-            lottie.destroy();
-        };
-    }, []);
-
-    return <div id="lottie-container" className="row-start-2 col-span-1 rounded-3xl scale-125 flex justify-center items-center"></div>;
+  return (
+    <a
+      href="https://github.com/prattiikk/Portfolio-v2.git"
+      target="_blank"
+      rel="noopener noreferrer"
+      id="lottie-container"
+      className="row-start-2 col-span-1 rounded-3xl bg-slate-400 flex justify-center items-center"
+    ></a>
+  );
 };
-
 
 export default GitIcon;
