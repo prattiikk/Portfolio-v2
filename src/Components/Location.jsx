@@ -1,14 +1,15 @@
 import React from "react";
-import puneLocationImg from "../assets/images/map-pune.png";
+import puneLocationImg from "../assets/images/map-pune3.png";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 const Location = () => {
   return (
-    <div className="row-start-2 col-span-1 rounded-3xl relative group cursor-pointer overflow-hidden  aspect-w-1 aspect-h-1">
+    <div className="row-start-2 col-span-1 rounded-3xl relative group cursor-pointer overflow-hidden shadow-2xl  aspect-w-1 aspect-h-1">
       <a
         href="https://maps.app.goo.gl/XoozP3hCwNFE3CyP9"
         target="_blank"
         rel="noopener noreferrer"
-        className="row-start-2 col-span-1 relative group cursor-pointer overflow-hidden"
+        className="row-start-2 col-span-1  group cursor-pointer overflow-hidden"
       >
         <img
           src={puneLocationImg}
@@ -16,13 +17,11 @@ const Location = () => {
           alt="location"
         />
 
-        {/* Dark overlay on hover */}
-        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
-
-        {/* Centered text */}
-        <span className="absolute  inset-0 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-          <span className="text-2xl opacity-40">Based</span>
-          <span className="text-3xl font-semibold"> Pune, India.</span>
+        <span className="absolute  inset-0 flex flex-col items-start justify-end border  text-black">
+          <span className="text-sm mb-4 ml-4 py-1 px-2 bg-white rounded-xl flex items-center text-opacity-70 hover:scale-105 duration-300 ease-in">
+            <CiLocationArrow1 />
+            <span className="pl-1">Pune, India.</span>
+          </span>
         </span>
       </a>
     </div>
