@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import './App.css';
-import Home from './Pages/Home';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import "./App.css";
+import Home from "./Pages/Home";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(
@@ -23,7 +23,7 @@ function App() {
   }, [isDarkMode]);
 
   return (
-    <div className={`${isDarkMode ? ' bg-gray-800' : 'bg-white'}`}>
+    <div className={`${isDarkMode ? " bg-black" : "bg-white"}`}>
       <Home toggleDarkMode={toggleDarkMode} />
     </div>
   );

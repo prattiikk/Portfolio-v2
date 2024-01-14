@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import lottie from "lottie-web";
-import animationData from "../../assets/icons/github-icon.json"; 
+import animationData from "../../assets/icons/github-icon.json";
 
 const GitIcon = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const GitIcon = () => {
       target="_blank"
       rel="noopener noreferrer"
       id="lottie-container"
-      className="row-start-2 col-span-1 rounded-3xl bg-slate-400 flex justify-center items-center"
+      className="row-start-2 col-span-1 rounded-3xl shadow-2xl bg-stone-200 flex justify-center items-center"
     ></a>
   );
 };
