@@ -3,7 +3,8 @@ import React from "react";
 
 const CV = () => {
   return (
-    <div className="row-start-2 col-span-1 rounded-3xl bg-slate-600 row-span-2"></div>
+    // <div className="row-start-2 col-span-1 rounded-3xl bg-slate-600 row-span-2">
+    <div className="w-full h-full bg-slate-100 "></div>
   );
 };
 

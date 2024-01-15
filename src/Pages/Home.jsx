@@ -6,7 +6,7 @@ import Location from "../Components/Location";
 import ModeSwitchBtn from "../Components/ModeSwitchBtn";
 import NavButtons from "../Components/NavBtns";
 import TwitterCard from "../Components/TwitterCard";
-import GitIcon from "../Components/lottie-icons/gitIcon.jsx";
+import GitIcon from "../Components/lottie-icons/GitIcon.jsx";
 import LinkedinIcon from "../Components/lottie-icons/LinkedinIcon";
 import Card from "../Components/Card.jsx";
 const Home = ({ toggleDarkMode }) => {
@@ -38,7 +38,9 @@ const Home = ({ toggleDarkMode }) => {
       <LinkedinIcon />
       <GitIcon />
 
-      <CV />
+      <Card gridSpec={{ rowStart: 2, rowSpan: 2, colStart: 3, colSpan: 1 }}>
+        <CV />
+      </Card>
       <Location />
 
       {/* row 3 */}
