@@ -9,9 +9,6 @@ const Card = ({ children, gridSpec }) => {
     col-start-${colStart}
     row-span-${rowSpan || 1}
     col-span-${colSpan || 1}
-    rounded-3xl
-    overflow-hidden
-    shadow-3xl
   `;
 
   return <div className={cardStyle}>{children}</div>;

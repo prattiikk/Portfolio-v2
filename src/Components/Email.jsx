@@ -4,7 +4,7 @@ import profilePic from "../assets/images/profilepic.jpeg";
 
 const Email = () => {
   return (
-    <div className="row-start-3 col-span-2 rounded-3xl bg-[#f4f2f2] px-8 flex flex-col items-center justify-center">
+    <div className=" w-full h-full rounded-3xl bg-slate-100 px-8 flex flex-col items-center justify-center">
       <div className=" w-4/5">
         <div className="chat chat-start">
           <div className="chat-image avatar">

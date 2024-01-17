@@ -1,5 +1,5 @@
 import Bio from "../Components/Bio";
-import CV from "../Components/CV";
+import CV from "../Components/ProjectMockup1.jsx";
 import AudioPlayer from "../Components/AudioPlayer.jsx";
 import Email from "../Components/Email";
 import Location from "../Components/Location";
@@ -9,12 +9,14 @@ import TwitterCard from "../Components/TwitterCard";
 import GitIcon from "../Components/lottie-icons/GitIcon.jsx";
 import LinkedinIcon from "../Components/lottie-icons/LinkedinIcon";
 import Card from "../Components/Card.jsx";
+import ProjectMockup2 from "../Components/ProjectMockup2.jsx";
+import ProjectMockup3 from "../Components/ProjectMockup3.jsx";
 const Home = ({ toggleDarkMode }) => {
   return (
     // const { rowStart, rowSpan, colStart, colSpan } = gridSpec;
 
     <div
-      className={`grid grid-cols-4 grid-rows-6 gap-6 w-[1200px] mx-auto py-16  text-white `}
+      className={`grid grid-cols-4 grid-rows-6 gap-6 w-[1200px] mx-auto py-24  text-white `}
     >
       {/* row 1 */}
 
@@ -35,28 +37,46 @@ const Home = ({ toggleDarkMode }) => {
       {/* row 2 */}
 
       {/* <LinkedInIcon /> */}
-      <LinkedinIcon />
-      <GitIcon />
+      <Card gridSpec={{ rowStart: 2, colSpan: 1 }}>
+        <LinkedinIcon />
+      </Card>
+      <Card gridSpec={{ rowStart: 2, colSpan: 1 }}>
+        <GitIcon />
+      </Card>
 
       <Card gridSpec={{ rowStart: 2, rowSpan: 2, colStart: 3, colSpan: 1 }}>
         <CV />
       </Card>
-      <Location />
+      <Card gridSpec={{ rowStart: 2, colSpan: 1 }}>
+        <Location />
+      </Card>
 
       {/* row 3 */}
-      <Email />
-      <TwitterCard />
+
+      <Card gridSpec={{ rowStart: 3, colSpan: 2 }}>
+        <ProjectMockup2 />
+      </Card>
+
+      <Card gridSpec={{ rowStart: 3, colSpan: 1 }}>
+        <TwitterCard />
+      </Card>
 
       {/* row 4  */}
-      <div className=" row-start-4 col-span-2  bg-slate-500 rounded-3xl p-4">
-        10
-      </div>
+      {/* <div className=" row-start-4 col-span-2  bg-slate-500 rounded-3xl p-4"></div> */}
+
+      {/* <div className=" row-start-4 col-span-1 row-span-2 bg-slate-500 rounded-3xl p-4">
+        12
+      </div> */}
+
+      <Card gridSpec={{ rowStart: 4, colSpan: 2 }}>
+        <Email />
+      </Card>
       <div className=" row-start-4 col-span-1  bg-slate-500 rounded-3xl p-4">
         11
       </div>
-      <div className=" row-start-4 col-span-1 row-span-2 bg-slate-500 rounded-3xl p-4">
-        12
-      </div>
+      <Card gridSpec={{ rowStart: 4, colSpan: 1, rowSpan: 2 }}>
+        <ProjectMockup3 />
+      </Card>
 
       {/* row 5  */}
       <div className=" row-start-5 col-span-1  bg-slate-500 rounded-3xl p-4">
