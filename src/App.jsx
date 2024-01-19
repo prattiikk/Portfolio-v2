@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./App.css";
 import Home from "./Pages/Home";
+import Hero from "./Pages/Hero";
 import Loading from "./Components/Loading";
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
 
   return (
     <div className={`${isDarkMode ? " bg-black" : "bg-white"}`}>
-      <Home toggleDarkMode={toggleDarkMode} />
+      <Hero toggleDarkMode={toggleDarkMode} />
     </div>
   );
 }

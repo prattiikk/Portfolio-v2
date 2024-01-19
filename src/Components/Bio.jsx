@@ -1,15 +1,13 @@
 const Bio = () => {
   return (
-    // <div className="col-span-2 h-[260px] flex flex-col ">
-    <div className="w-full h-full border border-white flex flex-col ">
-      <div className="w-1/2 p-4 flex flex-col items-start justify-center">
-        <span className=" text-6xl text-black font-bold tracking-tight  mt-6">
-          Pratik
-        </span>
-        <span className=" text-3xl text-black font-normal tracking-tight  w-full mt-2 opacity-50">
-          I try to build websites.
-        </span>
-      </div>
+    <div className="w-full h-full text-black flex flex-col items-start bg-slate-100 rounded-3xl shadow-xl p-10">
+      <h1 className=" text-purple-500 rounded-full text-4xl font-bold text-start ">
+        Pratik
+      </h1>
+      <p className="text-xl mt-2 ">
+        Indie music and anime enthusiast.
+        <br /> Always smiling.
+      </p>
     </div>
   );
 };
