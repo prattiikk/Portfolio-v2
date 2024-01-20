@@ -8,101 +8,11 @@ import NavButtons from "../Components/NavBtns";
 import TwitterCard from "../Components/TwitterCard";
 import GitIcon from "../Components/lottie-icons/GitIcon.jsx";
 import LinkedinIcon from "../Components/lottie-icons/LinkedinIcon";
-import Card from "../Components/Card.jsx";
 import ProjectMockup2 from "../Components/ProjectMockup2.jsx";
 import ProjectMockup3 from "../Components/ProjectMockup3.jsx";
 import WinkinFace from "../Components/lottie-icons/WinkingFace.jsx";
 import ContactMe from "../Components/ContactMe.jsx";
-import Gallery from "../Components/Gallary.jsx";
-// const Home = ({ toggleDarkMode }) => {
-//   return (
-//     // const { rowStart, rowSpan, colStart, colSpan } = gridSpec;
-
-//     <div
-//       className={`grid grid-cols-4 grid-rows-6 gap-6 w-[1200px] mx-auto py-24  text-white `}
-//     >
-//       {/* row 1 */}
-
-//       {/* <Bio/> */}
-//       {/* <NavButtons /> */}
-//       {/* <ModeSwitchBtn toggleDarkMode={toggleDarkMode} /> */}
-
-//       <Card gridSpec={{ rowStart: 1, colStart: 1, colSpan: 1 }}>
-//         <Bio />
-//       </Card>
-//       <Card gridSpec={{ rowStart: 1, colSpan: 1 }}>
-//         <WinkinFace />
-//       </Card>
-//       <Card gridSpec={{ rowStart: 1, colSpan: 1 }}>{/* <NavButtons /> */}</Card>
-//       <Card gridSpec={{ rowStart: 1, colSpan: 1 }}>
-//         {/* <ModeSwitchBtn toggleDarkMode={toggleDarkMode} /> */}
-//       </Card>
-
-//       {/* row 2 */}
-
-//       {/* <LinkedInIcon /> */}
-//       <Card gridSpec={{ rowStart: 2, colSpan: 1 }}>
-//         {/* <LinkedinIcon /> */}
-//       </Card>
-//       <Card gridSpec={{ rowStart: 2, colSpan: 1 }}>
-//         <GitIcon />
-//       </Card>
-
-//       <Card gridSpec={{ rowStart: 2, rowSpan: 2, colStart: 3, colSpan: 1 }}>
-//         <CV />
-//       </Card>
-//       <Card gridSpec={{ rowStart: 2, colSpan: 1 }}>
-//         <Location />
-//       </Card>
-
-//       {/* row 3 */}
-
-//       <Card gridSpec={{ rowStart: 3, colSpan: 2 }}>
-//         <ProjectMockup2 />
-//       </Card>
-
-//       <Card gridSpec={{ rowStart: 3, colSpan: 1 }}>
-//         <TwitterCard />
-//       </Card>
-
-//       {/* row 4  */}
-//       {/* <div className=" row-start-4 col-span-2  bg-slate-500 rounded-3xl p-4"></div> */}
-
-//       {/* <div className=" row-start-4 col-span-1 row-span-2 bg-slate-500 rounded-3xl p-4">
-//         12
-//       </div> */}
-
-//       <Card gridSpec={{ rowStart: 4, colSpan: 2 }}>{/* <Email /> */}</Card>
-//       <div className=" row-start-4 col-span-1  bg-slate-500 rounded-3xl p-4">
-//         11
-//       </div>
-//       <Card gridSpec={{ rowStart: 4, colSpan: 1, rowSpan: 2 }}>
-//         <ProjectMockup3 />
-//       </Card>
-
-//       {/* row 5  */}
-//       <div className=" row-start-5 col-span-1  bg-slate-500 rounded-3xl p-4">
-//         13
-//       </div>
-//       <div className=" row-start-5 col-span-2  bg-slate-500 rounded-3xl p-4">
-//         14
-//       </div>
-
-//       {/* row 6  */}
-
-//       <Card gridSpec={{ rowStart: 6, colSpan: 2 }}>
-//         <ContactMe />
-//       </Card>
-
-//       <Card gridSpec={{ rowStart: 6, colSpan: 1 }}>
-//         {/* <Gallery /> */}
-//       </Card>
-//       <AudioPlayer />
-//     </div>
-//   );
-// };
-
-// export default Home;
+import PhotoGallery from "../Components/PhotoGallary.jsx";
 
 const Hero = ({ toggleDarkMode }) => {
   return (
@@ -146,24 +56,39 @@ const Hero = ({ toggleDarkMode }) => {
       </div>
 
       {/* row 3 */}
-      {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 grid-rows-[auto] md:grid-rows-2 lg:grid-rows-[auto] col-span-4 row-start-3">
-        <div className="col-span-2 md:row-start-1 lg:row-start-1">
-          <ProjectMockup2 />
-        </div>
-        <div className="col-span-1 md:row-start-1 lg:row-start-1 aspect-square">
-          <TwitterCard />
-        </div>
-      </div> */}
-      {/* row 4  */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-3 lg:grid-rows-[auto] col-span-4 row-start-3">
-        <div className="col-span-1 md:col-span-2 md:row-start-1 aspect-rectangle ">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-4 lg:grid-rows-[auto] col-span-4 row-start-3">
+        <div className="col-span-1 md:col-span-2 md:row-start-1 aspect-square md:aspect-auto">
           <Email />
         </div>
-        <div className="col-span-1 md:row-start-1 aspect-square">
+
+        <div className="col-span-1 md:row-start-2 lg:row-start-1 lg:col-start-3 aspect-square bg-slate-600">
           11
         </div>
+
         <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-2 lg:col-start-4 aspect-rectangle">
           <ProjectMockup3 />
+        </div>
+
+        <div className="col-span-1 md:row-start-3 lg:row-start-2 row-span-1 lg:col-start-1 aspect-square bg-slate-600">
+          12
+        </div>
+
+        <div className="col-span-1 row-span-1 md:col-span-2 md:row-start-4 lg:row-start-2 lg:col-start-2 aspect-square md:aspect-auto bg-slate-600">
+          13
+        </div>
+      </div>
+
+      {/* row 4 */}
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-2 lg:grid-rows-[auto] col-span-4 row-start-4">
+        <div className="col-span-1 md:col-span-2 md:row-start-1 row-span-1 lg:col-start-1 aspect-square md:aspect-auto">
+          <ContactMe />
+        </div>
+        <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-1 lg:col-start-3 aspect-square relative">
+          <PhotoGallery />
+        </div>
+        <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-1 lg:col-start-4 aspect-square">
+          <AudioPlayer />
         </div>
       </div>
     </div>
@@ -171,18 +96,3 @@ const Hero = ({ toggleDarkMode }) => {
 };
 
 export default Hero;
-
-// {/* row 5  */}
-// <div className="row-start-5 col-span-1 bg-slate-500 rounded-3xl p-4">
-//   13
-// </div>
-// <div className="row-start-5 col-span-2 bg-slate-500 rounded-3xl p-4">
-//   14
-// </div>
-
-// {/* row 6  */}
-// <div className="row-start-6 col-span-2">
-//   <ContactMe />
-// </div>
-// <div className="row-start-6 col-span-1">{/* <Gallery /> */}</div>
-// <AudioPlayer />
