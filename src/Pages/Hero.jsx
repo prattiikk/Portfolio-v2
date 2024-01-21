@@ -1,7 +1,7 @@
 import Bio from "../Components/Bio";
 import ProjectMockup1 from "../Components/ProjectMockup1.jsx";
 import AudioPlayer from "../Components/AudioPlayer.jsx";
-import Email from "../Components/Email";
+import ContactForm from "../Components/ContactForm.jsx";
 import Location from "../Components/Location";
 import ModeSwitchBtn from "../Components/ModeSwitchBtn";
 import NavButtons from "../Components/NavBtns";
@@ -11,7 +11,6 @@ import LinkedinIcon from "../Components/lottie-icons/LinkedinIcon";
 import ProjectMockup2 from "../Components/ProjectMockup2.jsx";
 import ProjectMockup3 from "../Components/ProjectMockup3.jsx";
 import WinkinFace from "../Components/lottie-icons/WinkingFace.jsx";
-import ContactMe from "../Components/ContactMe.jsx";
 import PhotoGallery from "../Components/PhotoGallary.jsx";
 
 const Hero = ({ toggleDarkMode }) => {
@@ -57,8 +56,8 @@ const Hero = ({ toggleDarkMode }) => {
 
       {/* row 3 */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-4 lg:grid-rows-[auto] col-span-4 row-start-3">
-        <div className="col-span-1 md:col-span-2 md:row-start-1 aspect-square md:aspect-auto">
-          <Email />
+        <div className="col-span-1 md:col-span-2 md:row-start-1 aspect-square md:aspect-auto bg-slate-600">
+          {/* <Email /> */}
         </div>
 
         <div className="col-span-1 md:row-start-2 lg:row-start-1 lg:col-start-3 aspect-square bg-slate-600">
@@ -82,7 +81,7 @@ const Hero = ({ toggleDarkMode }) => {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-2 lg:grid-rows-[auto] col-span-4 row-start-4">
         <div className="col-span-1 md:col-span-2 md:row-start-1 row-span-1 lg:col-start-1 aspect-square md:aspect-auto">
-          <ContactMe />
+          <ContactForm />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-1 lg:col-start-3 aspect-square relative">
           <PhotoGallery />

@@ -4,9 +4,9 @@ const Bio = () => {
       <h1 className=" text-purple-500 rounded-full text-4xl font-bold text-start ">
         Pratik
       </h1>
-      <p className="text-xl mt-2 ">
-        Indie music and anime enthusiast.
-        <br /> Always smiling.
+      <p className="text-lg mt-2 ">
+        Student | Aspiring Web Developer | India | Finds joy in music and anime
+        🎶📺
       </p>
     </div>
   );

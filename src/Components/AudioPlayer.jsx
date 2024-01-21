@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import audioFile from "../assets/audios/JunoonMitraz.mp3";
+
+// import audioFile from "../assets/audios/JunoonMitraz.mp3";
+import audioFile from "../assets/audios/JannatMitraz.mp3";
+
 import mitraz from "../assets/images/junoonMitraz.webp";
 import SpotifyIcon from "./lottie-icons/SpotifyIcon";
 import { FaPlay } from "react-icons/fa";
@@ -43,7 +46,7 @@ const CustomAudioPlayer = () => {
         <div className="w-full h-1/2 flex flex-col items-center justify-center">
           <div className="text-left text-black w-full py-1 pl-4 mb-2">
             <div className="text-lg font-semibold">
-              Current fav &#10084;&#65039; - Junoon
+              Current fav &#10084;&#65039; - Jannat
             </div>
             <div className="text-sm opacity-40">Mitraz</div>
           </div>
