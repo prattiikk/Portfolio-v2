@@ -1,14 +1,35 @@
-.spinnaker-regular {
-  font-family: "Spinnaker", sans-serif;
-  font-style: normal;
+@font-face {
+  font-family: "Graphik";
+  src: url("../src/assets/fonts/Graphik-Font-Family/GraphikRegular.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikThin.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikSuper.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikSemibold.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikMedium.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikLight.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikExtralight.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikBold.otf")
+      format("opentype"),
+    url("../src/assets/fonts/Graphik-Font-Family/GraphikBlack.otf")
+      format("opentype");
+}
+
+body {
+  font-family: "Graphik", sans-serif;
 }
 
 @keyframes moveClouds {
   from {
-    transform: translate(-100%, -100%);
+    transform: translate(-50px, -50px);
   }
   to {
-    transform: translate(150%, 150%) rotate(180deg) scale(1.5);
+    transform: translate(400px, 400px) rotate(180deg) scale(1.5);
   }
 }
 

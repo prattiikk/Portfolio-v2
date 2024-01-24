@@ -37,7 +37,7 @@ const CustomAudioPlayer = () => {
             alt="song image"
           />
           <div
-            className="tooltip tooltip-left w-1/4 mr-2 mt-2"
+            className="tooltip tooltip-left w-1/4 mr-4 mt-4"
             data-tip="go to the playlist"
           >
             <SpotifyIcon />

@@ -47,7 +47,7 @@ const PhotoGallery = () => {
       </div>
       <img
         src={photosIcon}
-        className="absolute top-0 right-0 mt-1 mr-1 w-1/4 h-1/4"
+        className="absolute top-0 right-0 mt-4 mr-4 w-1/4 h-1/4"
         alt=""
       />
     </div>
