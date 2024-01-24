@@ -1,5 +1,43 @@
 .spinnaker-regular {
   font-family: "Spinnaker", sans-serif;
   font-style: normal;
+}
 
+@keyframes moveClouds {
+  from {
+    transform: translate(-100%, -100%);
+  }
+  to {
+    transform: translate(150%, 150%) rotate(180deg) scale(1.5);
+  }
+}
+
+@keyframes movePlane {
+  from {
+    transform: translate(-50px, -50px) rotate(135deg);
+  }
+  to {
+    transform: translate(300px, 300px) rotate(135deg);
+  }
+}
+
+@keyframes movePlaneShadow {
+  from {
+    transform: translate(-50px, -50px) rotate(135deg);
+  }
+  to {
+    transform: translate(300px, 300px) rotate(135deg);
+  }
+}
+
+.animate-moveClouds {
+  animation: moveClouds 30s linear infinite;
+}
+
+.animate-movePlane {
+  animation: movePlane 15s linear infinite;
+}
+
+.animate-movePlaneShadow {
+  animation: movePlaneShadow 15s linear infinite;
 }

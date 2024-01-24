@@ -22,7 +22,7 @@ const WinkinFace = () => {
   return (
     <div
       id="wink-container"
-      className=" rounded-3xl shadow-2xl bg-slate-100 flex justify-center items-center"
+      className=" rounded-3xl shadow-xl bg-slate-100 flex justify-center items-center"
     ></div>
   );
 };

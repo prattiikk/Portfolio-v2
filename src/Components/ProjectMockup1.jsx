@@ -12,7 +12,7 @@ const ProjectMockup1 = () => {
 
   return (
     <div
-      className={`relative w-full h-[600px] overflow-hidden shadow-lg rounded-3xl bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 ${
+      className={`relative w-full h-[600px] overflow-hidden shadow-xl rounded-3xl bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 ${
         isFocused ? "focused" : ""
       }`}
       onClick={handleLinkClick}

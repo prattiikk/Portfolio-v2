@@ -58,7 +58,7 @@ const ContactForm = () => {
         "Pratik"
       );
       playTextSound();
-    }, 2000);
+    }, 2500);
 
     inputRef.current.value = "";
   };
@@ -74,7 +74,7 @@ const ContactForm = () => {
     setTimeout(() => {
       addMessage("start", `Got it! I'll get back to you soon.`, "Pratik");
       playTextSound();
-    }, 2000);
+    }, 2500);
 
     inputRef.current.value = "";
     inputRef.current.disabled = true;
@@ -87,7 +87,7 @@ const ContactForm = () => {
   }, [messages]);
 
   return (
-    <div className="w-full h-full rounded-3xl overflow-auto bg-stone-100 md:px-8 flex flex-col items-center justify-center">
+    <div className="w-full h-full rounded-3xl shadow-xl overflow-auto bg-stone-100 md:px-8 flex flex-col items-center justify-center">
       <div
         id="chat-container"
         className="w-full h-[200px] overflow-scroll flex flex-col"
@@ -125,7 +125,7 @@ const ContactForm = () => {
       </div>
       <div className="flex items-center w-full mt-2 h-12 border-2 rounded-full bg-transparent">
         <a
-          href="#"
+          href="mailto:pvks5423@gmail.com"
           className=" text-gray-400 h-full mx-2 flex items-center justify-center hover:text-blue-500 tooltip tooltip-right"
           data-tip="pvks5423@gmail.com"
         >
@@ -134,7 +134,7 @@ const ContactForm = () => {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Type here"
+          placeholder="Message"
           className="input w-full h-full relative bg-transparent text-black focus:border-none"
           style={{ border: "none", outline: "none" }}
         />

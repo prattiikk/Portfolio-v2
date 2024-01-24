@@ -12,6 +12,7 @@ import ProjectMockup2 from "../Components/ProjectMockup2.jsx";
 import ProjectMockup3 from "../Components/ProjectMockup3.jsx";
 import WinkinFace from "../Components/lottie-icons/WinkingFace.jsx";
 import PhotoGallery from "../Components/PhotoGallary.jsx";
+import Upcoming from "../Components/Upcoming.jsx";
 
 const Hero = ({ toggleDarkMode }) => {
   return (
@@ -25,7 +26,8 @@ const Hero = ({ toggleDarkMode }) => {
           <WinkinFace />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 aspect-square lg:w-auto">
-          <NavButtons />
+          {/* <NavButtons /> */}
+          <Upcoming />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 aspect-square lg:w-auto">
           <ModeSwitchBtn toggleDarkMode={toggleDarkMode} />
@@ -56,24 +58,24 @@ const Hero = ({ toggleDarkMode }) => {
 
       {/* row 3 */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-4 lg:grid-rows-[auto] col-span-4 row-start-3">
-        <div className="col-span-1 md:col-span-2 md:row-start-1 aspect-square md:aspect-auto bg-slate-600">
-          {/* <Email /> */}
+        <div className="col-span-1 md:col-span-2 md:row-start-1 aspect-square md:aspect-auto">
+          <Upcoming />
         </div>
 
-        <div className="col-span-1 md:row-start-2 lg:row-start-1 lg:col-start-3 aspect-square bg-slate-600">
-          11
+        <div className="col-span-1 md:row-start-2 lg:row-start-1 lg:col-start-3 aspect-square">
+          <Upcoming />
         </div>
 
         <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-2 lg:col-start-4 aspect-rectangle">
           <ProjectMockup3 />
         </div>
 
-        <div className="col-span-1 md:row-start-3 lg:row-start-2 row-span-1 lg:col-start-1 aspect-square bg-slate-600">
-          12
+        <div className="col-span-1 md:row-start-3 lg:row-start-2 row-span-1 lg:col-start-1 aspect-square">
+          <Upcoming />
         </div>
 
-        <div className="col-span-1 row-span-1 md:col-span-2 md:row-start-4 lg:row-start-2 lg:col-start-2 aspect-square md:aspect-auto bg-slate-600">
-          13
+        <div className="col-span-1 row-span-1 md:col-span-2 md:row-start-4 lg:row-start-2 lg:col-start-2 aspect-square md:aspect-auto">
+          <Upcoming />
         </div>
       </div>
 

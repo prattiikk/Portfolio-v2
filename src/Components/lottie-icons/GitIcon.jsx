@@ -24,7 +24,7 @@ const GitIcon = () => {
       target="_blank"
       rel="noopener noreferrer"
       id="lottie-container"
-      className="row-start-2 col-span-1 rounded-3xl shadow-2xl bg-slate-100 flex justify-center items-center"
+      className="row-start-2 col-span-1 rounded-3xl shadow-xl bg-slate-100 flex justify-center items-center"
     ></a>
   );
 };

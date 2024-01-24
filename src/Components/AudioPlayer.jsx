@@ -28,9 +28,9 @@ const CustomAudioPlayer = () => {
   }, [isPlaying]);
 
   return (
-    <div className=" w-full h-full flex justify-center items-center overflow-hidden shadow-2xl bg-stone-200 rounded-3xl aspect-w-1 aspect-h-1">
+    <div className=" w-full h-full flex justify-center items-center overflow-hidden shadow-xl bg-stone-200 rounded-3xl aspect-w-1 aspect-h-1">
       <div className="flex flex-col items-center w-full h-full">
-        <div className="h-1/2 w-full flex justify-between">
+        <div className="h-1/2 w-full flex justify-between ">
           <img
             src={mitraz}
             className=" mask mask-squircle h-full w-1/2 mt-2 ml-2"

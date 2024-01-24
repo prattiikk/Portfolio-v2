@@ -22,7 +22,7 @@ const LinkedinIcon = () => {
   return (
     <div
       id="linkedin-container"
-      className=" rounded-3xl shadow-2xl bg-slate-100 flex justify-center items-center"
+      className=" rounded-3xl shadow-xl bg-slate-100 flex justify-center items-center"
     ></div>
   );
 };
