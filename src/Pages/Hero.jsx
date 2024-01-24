@@ -13,6 +13,7 @@ import ProjectMockup3 from "../Components/ProjectMockup3.jsx";
 import WinkinFace from "../Components/lottie-icons/WinkingFace.jsx";
 import PhotoGallery from "../Components/PhotoGallary.jsx";
 import Upcoming from "../Components/Upcoming.jsx";
+import GithubCard from "../Components/GithubCard.jsx";
 
 const Hero = ({ toggleDarkMode }) => {
   return (
@@ -40,7 +41,8 @@ const Hero = ({ toggleDarkMode }) => {
           <LinkedinIcon />
         </div>
         <div className="col-span-1 md:row-start-1 lg:row-start-1 aspect-square">
-          <GitIcon />
+          {/* <GitIcon /> */}
+          <GithubCard />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-2 lg:col-start-3 aspect-rectangle md:order-2 lg:order-2">
           <ProjectMockup1 />
