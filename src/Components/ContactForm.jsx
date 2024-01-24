@@ -1,34 +1,37 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
+import textSound from "../assets/audios/textMessageSound.mp3";
 
 const ContactForm = () => {
   const [messages, setMessages] = useState([
     {
       type: "start",
-      content: "Hey there! Ready for a chat?",
-      sender: "Pratik",
-      timestamp: new Date().toLocaleTimeString(),
-    },
-    {
-      type: "end",
-      content: "Yep, let's do it!",
+      content: "Hey there! Can I get your contact information?",
       sender: "you",
       timestamp: new Date().toLocaleTimeString(),
     },
     {
       type: "start",
-      content: `Nice! What's your name?`,
+      content: "Sure, I'd love to connect! By the way, what's your name?",
       sender: "Pratik",
       timestamp: new Date().toLocaleTimeString(),
     },
   ]);
+
   const [userDetails, setUserDetails] = useState({
     name: "",
     email: "",
   });
 
+  // text input reference
   const inputRef = useRef();
+
+  // text message sound
+  const audioRef = useRef(new Audio(textSound));
+  const playTextSound = () => {
+    audioRef.current.play();
+  };
 
   const addMessage = (type, content, sender) => {
     const newMessage = {
@@ -42,9 +45,10 @@ const ContactForm = () => {
 
   const handleNameInput = () => {
     const name = inputRef.current.value;
-    setUserDetails((prevDetails) => ({ ...prevDetails, name }));
+    setUserDetails(() => ({ name: name }));
     setTimeout(() => {
       addMessage("end", `${name}`, "you");
+      playTextSound();
     }, 500);
 
     setTimeout(() => {
@@ -53,6 +57,7 @@ const ContactForm = () => {
         `Nice to meet you, ${name}! Drop your email so I can reach out.`,
         "Pratik"
       );
+      playTextSound();
     }, 2000);
 
     inputRef.current.value = "";
@@ -60,16 +65,20 @@ const ContactForm = () => {
 
   const handleEmailInput = () => {
     const email = inputRef.current.value;
-    setUserDetails((prevDetails) => ({ ...prevDetails, email }));
+    setUserDetails(() => ({ email: email }));
     setTimeout(() => {
       addMessage("end", `${email}`, "you");
+      playTextSound();
     }, 500);
 
     setTimeout(() => {
       addMessage("start", `Got it! I'll get back to you soon.`, "Pratik");
+      playTextSound();
     }, 2000);
 
     inputRef.current.value = "";
+    inputRef.current.disabled = true;
+    inputRef.current.style.backgroundColor = "transparent";
   };
 
   useEffect(() => {
