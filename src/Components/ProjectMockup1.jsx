@@ -26,8 +26,10 @@ const ProjectMockup1 = () => {
             : "hover:rotate-0 translate-x-3/4 hover:translate-x-0"
         } transition-transform duration-500 ease-in-out`}
       >
+        
         <img src={spelltreeMockup} alt="project mockup" />
       </div>
+
       <div className="absolute bottom-0 left-0 mb-2 ml-2 ">
         <div className="tooltip bg-white p-2 rounded-full text-black">
           <span className="tooltiptext">shell-tree.vercel.app </span>

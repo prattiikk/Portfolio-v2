@@ -9,7 +9,7 @@ const AirplaneScene = () => {
       <img
         src={CloudImage}
         alt="cloud"
-        className="absolute w-full opacity-[0.1] brightness-[0.01] animate-moveClouds"
+        className="absolute w-full opacity-[0.2] brightness-[0.01] animate-moveClouds"
       />
       <div className=" absolute inset-0">
         <img
