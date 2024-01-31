@@ -5,7 +5,6 @@ import animationData from "../../assets/icons/github-icon.json";
 const GitIcon = () => {
   useEffect(() => {
     const animationContainer = document.getElementById("lottie-container");
-
     lottie.loadAnimation({
       container: animationContainer,
       animationData: animationData,
