@@ -20,7 +20,8 @@ const TwitterCard = () => {
         </div>
         <div className="row-span-2 text-black text-xl p-2">
           <span>
-            My best ideas always hit me when I'm on the toilet seat, man!
+            Chaos: my favorite coding language.
+            {/* My best ideas always hit me when I'm on the toilet seat, man! */}
           </span>
         </div>
         <div className="row-span-1 p-2">

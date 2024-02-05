@@ -1,9 +1,16 @@
 import React from "react";
 import GitIcon from "./lottie-icons/GitIcon.jsx";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../store/Store.jsx";
 
 const GithubCard = () => {
+  const isDark = useRecoilValue(isDarkMode);
   return (
-    <div className="w-full h-full bg-black rounded-3xl shadow-xl relative text-white cursor-pointer p-4 pl-8 md:pl-6 hover:text-black hover:bg-slate-100 transition-all ease-linear duration-300">
+    <div
+      className={`w-full h-full  rounded-3xl shadow-xl relative text-white cursor-pointer p-4 pl-8 md:pl-6 hover:text-black hover:bg-slate-100 transition-all ease-linear duration-300  ${
+        isDark == true ? " bg-dark-secondary" : "bg-black "
+      }`}
+    >
       <div className=" absolute w-[30%] h-[30%] rounded-3xl top-0 right-0 mt-6 md:mt-4 mr-6 md:mr-4">
         <GitIcon />
       </div>

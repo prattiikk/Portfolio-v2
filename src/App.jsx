@@ -3,25 +3,11 @@ import PropTypes from "prop-types";
 import "./App.css";
 import Hero from "./Pages/Hero";
 import Loading from "./Components/Loading";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "./store/Store";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    // localStorage.getItem('isDarkMode') === 'true' || true
-    false
-  );
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => {
-      const newState = !prev;
-      // localStorage.setItem('isDarkMode', newState);
-      console.log(isDarkMode);
-      return newState;
-    });
-  };
-
-  useEffect(() => {
-    // localStorage.setIktem('isDarkMode', isDarkMode);
-  }, [isDarkMode]);
+  const isDark = useRecoilValue(isDarkMode);
 
   const [assetsLoaded, setAssetsLoaded] = useState(false);
 
@@ -32,13 +18,9 @@ function App() {
     return () => clearTimeout(loadingTimeout);
   }, []);
 
-  // if (!assetsLoaded) {
-  //   return <Loading />;
-  // }
-
   return (
-    <div className={`${isDarkMode ? " bg-black" : "bg-white"}`}>
-      {assetsLoaded ? <Hero toggleDarkMode={toggleDarkMode} /> : <Loading />}
+    <div className={`${isDark ? " bg-black" : "bg-white"}`}>
+      {assetsLoaded ? <Hero /> : <Loading />}
     </div>
   );
 }

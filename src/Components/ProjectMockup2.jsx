@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import rizzApiMockup from "../assets/images/mockups/rizz-api-frontend_(desktop version).png";
-
+import rizzApiMockup from "../assets/images/mockups/rizz-api.vercel.app_.png";
 const ProjectMockup2 = () => {
   const handleLinkClick = () => {
     window.location.href = "https://example.com";

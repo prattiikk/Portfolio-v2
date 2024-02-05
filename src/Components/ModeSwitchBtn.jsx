@@ -1,16 +1,27 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { isDarkMode } from "../store/Store";
 
-const ModeSwitchBtn = ({ toggleModeChanger }) => {
+const ModeSwitchBtn = () => {
+  const [mode, setMode] = useRecoilState(isDarkMode);
+  const toggleModeChanger = () => {
+    setMode((prev) => !prev);
+  };
+
   return (
     // <div className=' col-span-1 flex justify-center items-center shadow-2xl bg-slate-500 rounded-3xl  aspect-w-1 aspect-h-1'>
-    <div className="w-full h-full flex justify-center items-center shadow-xl bg-slate-200 rounded-3xl  aspect-w-1 aspect-h-1 text-black">
+    <div
+      className={`w-full h-full flex justify-center items-center shadow-xl  rounded-3xl  aspect-w-1 aspect-h-1  ${
+        mode ? " bg-dark-primary" : "bg-light-primary"
+      }`}
+    >
       <label className="swap swap-rotate scale-150">
         <input
           type="checkbox"
           className="theme-controller"
           value="synthwave"
-          checked={toggleModeChanger}
+          onChange={toggleModeChanger}
         />
 
         <svg

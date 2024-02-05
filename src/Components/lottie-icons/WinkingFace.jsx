@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import lottie from "lottie-web";
-import animationData from "../../assets/icons/Cool Icon.json"; // Replace with the actual path
+import animationData from "../../assets/icons/winkingFace.json"; // Replace with the actual path
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../../store/Store";
 
 const WinkinFace = () => {
   useEffect(() => {
@@ -19,10 +21,14 @@ const WinkinFace = () => {
     };
   }, []);
 
+  const isDark = useRecoilValue(isDarkMode);
+
   return (
     <div
       id="wink-container"
-      className=" rounded-3xl shadow-xl bg-slate-100 flex justify-center items-center"
+      className={`rounded-3xl shadow-xl flex justify-center items-center ${
+        isDark == true ? "bg-dark-primary text-white" : " bg-light-primary"
+      }`}
     ></div>
   );
 };

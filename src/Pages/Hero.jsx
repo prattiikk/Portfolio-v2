@@ -4,27 +4,32 @@ import AudioPlayer from "../Components/AudioPlayer.jsx";
 import ContactForm from "../Components/ContactForm.jsx";
 import Location from "../Components/Location";
 import ModeSwitchBtn from "../Components/ModeSwitchBtn";
-import NavButtons from "../Components/NavBtns";
 import TwitterCard from "../Components/TwitterCard";
-import GitIcon from "../Components/lottie-icons/GitIcon.jsx";
 import LinkedinIcon from "../Components/lottie-icons/LinkedinIcon";
 import ProjectMockup2 from "../Components/ProjectMockup2.jsx";
 import ProjectMockup3 from "../Components/ProjectMockup3.jsx";
-import WinkinFace from "../Components/lottie-icons/WinkingFace.jsx";
+import WinkingFace from "../Components/lottie-icons/WinkingFace.jsx";
 import PhotoGallery from "../Components/PhotoGallary.jsx";
 import Upcoming from "../Components/Upcoming.jsx";
 import GithubCard from "../Components/GithubCard.jsx";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../store/Store.jsx";
+import SleepingFace from "../Components/lottie-icons/SleepingFace.jsx";
 
 const Hero = ({ toggleDarkMode }) => {
+  const isDark = useRecoilValue(isDarkMode);
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 w-[320px] md:w-[600px] lg:w-[1200px] mx-auto py-24 text-white">
+    <div
+      className={`grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 w-[320px] md:w-[600px] lg:w-[1200px] mx-auto py-24
+      ${isDark == true ? "text-white" : " text-black"}`}
+    >
       {/* Row 1 */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 grid-rows-4 md:grid-rows-2 lg:grid-rows-[auto] col-span-4 row-start-1">
         <div className="col-span-1 lg:row-start-1 lg:col-start-1 lg:w-auto">
           <Bio />
         </div>
         <div className="col-span-1 lg:row-start-1 aspect-square lg:w-auto">
-          <WinkinFace />
+          {isDark == true ? <SleepingFace /> : <WinkingFace />}
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 aspect-square lg:w-auto">
           {/* <NavButtons /> */}
