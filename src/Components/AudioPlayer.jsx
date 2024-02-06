@@ -7,9 +7,12 @@ import mitraz from "../assets/images/junoonMitraz.webp";
 import SpotifyIcon from "./lottie-icons/SpotifyIcon";
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../store/Store";
 
 const CustomAudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const isDark = useRecoilValue(isDarkMode);
 
   const togglePlay = () => {
     setIsPlaying((prevIsPlaying) => !prevIsPlaying);
@@ -28,7 +31,11 @@ const CustomAudioPlayer = () => {
   }, [isPlaying]);
 
   return (
-    <div className=" w-full h-full flex justify-center items-center overflow-hidden shadow-xl bg-stone-200 rounded-3xl aspect-w-1 aspect-h-1">
+    <div
+      className={`w-full h-full flex justify-center items-center overflow-hidden shadow-xl rounded-3xl aspect-w-1 aspect-h-1 ${
+        isDark == true ? "dark-primary" : "bg-stone-200 "
+      }`}
+    >
       <div className="flex flex-col items-center w-full h-full">
         <div className="h-1/2 w-full flex justify-between ">
           <img
@@ -43,8 +50,12 @@ const CustomAudioPlayer = () => {
             <SpotifyIcon />
           </div>
         </div>
-        <div className="w-full h-1/2 flex flex-col items-center justify-center">
-          <div className="text-left text-black w-full py-1 pl-4 mb-2">
+        <div
+          className={`w-full h-1/2 flex flex-col items-center justify-center ${
+            isDark == true ? " text-white" : " text-black"
+          } `}
+        >
+          <div className="text-left  w-full py-1 pl-4 mb-2">
             <div className="text-lg font-semibold">
               Current fav &#10084;&#65039; - Jannat
             </div>
@@ -52,7 +63,7 @@ const CustomAudioPlayer = () => {
           </div>
           <button
             onClick={togglePlay}
-            className="text-black text-xl font-semibold border-none cursor-pointer"
+            className=" text-xl font-semibold border-none cursor-pointer"
           >
             {isPlaying ? <FaPause /> : <FaPlay />}
           </button>

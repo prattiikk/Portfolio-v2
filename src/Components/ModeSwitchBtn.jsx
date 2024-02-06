@@ -1,19 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { isDarkMode } from "../store/Store";
+import { isDarkMode, setModeInLocalStorage } from "../store/Store";
 
 const ModeSwitchBtn = () => {
   const [mode, setMode] = useRecoilState(isDarkMode);
   const toggleModeChanger = () => {
-    setMode((prev) => !prev);
+    const newMode = !mode;
+    setMode(newMode);
+    setModeInLocalStorage(newMode); // Update the mode in local storage
+    document.body.classList.add("hide-content"); // Add class to hide content
+    window.location.reload(); // Reload the page after mode change
   };
 
   return (
     // <div className=' col-span-1 flex justify-center items-center shadow-2xl bg-slate-500 rounded-3xl  aspect-w-1 aspect-h-1'>
     <div
       className={`w-full h-full flex justify-center items-center shadow-xl  rounded-3xl  aspect-w-1 aspect-h-1  ${
-        mode ? " bg-dark-primary" : "bg-light-primary"
+        mode ? "dark-primary" : "light-primary"
       }`}
     >
       <label className="swap swap-rotate scale-150">

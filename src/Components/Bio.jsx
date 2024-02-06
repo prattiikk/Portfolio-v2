@@ -6,7 +6,7 @@ const Bio = () => {
   return (
     <div
       className={`w-full h-full flex flex-col items-start  rounded-3xl shadow-xl pt-16 p-12 ${
-        isDark == true ? " bg-dark-primary text-white" : " bg-light-primary text-black"
+        isDark == true ? "dark-primary text-white" : "light-primary text-black"
       }`}
     >
       <h1 className=" text-purple-500 rounded-full text-4xl font-bold text-start ">

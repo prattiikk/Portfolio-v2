@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         light: {
-          primary: "#e9e0ff", // Light theme primary color
-          secondary: "#2ecc71", // Light theme secondary color
-          tertiary: "#e74c3c", // Light theme tertiary color
+          primary: "#F1F5F9", // Light theme primary color
+          secondary: "#e9e0ff", // Light theme secondary color
+          tertiary: "#F1F5F9", // Light theme tertiary color
         },
         dark: {
           primary: "#1a0e36", // Dark theme primary color

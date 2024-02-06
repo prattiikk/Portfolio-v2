@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import lottie from "lottie-web";
 import animationData from "../../assets/icons/spotify-icon.json";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../../store/Store";
 
 const spotifyIcon = () => {
+  const isDark = useRecoilValue(isDarkMode);
   useEffect(() => {
     const animationContainer = document.getElementById("spotify-container");
 
@@ -16,7 +19,7 @@ const spotifyIcon = () => {
     return () => {
       lottie.destroy();
     };
-  }, []);
+  }, [isDark]);
 
   return (
     <div

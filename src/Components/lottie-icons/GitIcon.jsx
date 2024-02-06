@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import lottie from "lottie-web";
 import animationData from "../../assets/icons/github-icon.json";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../../store/Store";
 
 const GitIcon = () => {
+  const isDark = useRecoilValue(isDarkMode);
   useEffect(() => {
     const animationContainer = document.getElementById("lottie-container");
     lottie.loadAnimation({
@@ -15,8 +18,7 @@ const GitIcon = () => {
     return () => {
       lottie.destroy();
     };
-  }, []);
-  
+  }, [isDark]);
 
   return (
     <a

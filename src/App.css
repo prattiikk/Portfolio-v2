@@ -23,6 +23,22 @@
 body {
   font-family: "Graphik", sans-serif;
 }
+.light-primary {
+  background-color: rgb(241, 246, 250);
+  /* background-color: ghostwhite; */
+  /* background-color: whitesmoke; */
+}
+
+.dark-primary {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(67, 75, 90, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hide-content {
+  display: none;
+}
 
 @keyframes moveClouds {
   from {
@@ -62,8 +78,6 @@ body {
 .animate-movePlaneShadow {
   animation: movePlaneShadow 15s linear infinite;
 }
-
-
 
 .skeletoneff {
   /* border: 1px dotted gray; */
@@ -109,4 +123,3 @@ body {
     height: 100%;
   }
 } */
-

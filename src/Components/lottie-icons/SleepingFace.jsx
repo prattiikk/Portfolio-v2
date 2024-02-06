@@ -22,7 +22,7 @@ const SleepingFace = () => {
   return (
     <div
       id="sleep-container"
-      className={`rounded-3xl shadow-xl flex justify-center items-center bg-dark-primary`}
+      className={`rounded-3xl shadow-xl flex justify-center items-center dark-primary`}
     ></div>
   );
 };

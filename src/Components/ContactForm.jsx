@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import textSound from "../assets/audios/textMessageSound.mp3";
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "../store/Store";
 
 const ContactForm = () => {
   const [messages, setMessages] = useState([
@@ -86,8 +88,14 @@ const ContactForm = () => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
   }, [messages]);
 
+  const isDark = useRecoilValue(isDarkMode);
+
   return (
-    <div className="w-full h-full rounded-3xl shadow-xl overflow-auto bg-stone-100 md:px-8 flex flex-col items-center justify-center">
+    <div
+      className={`w-full h-full rounded-3xl shadow-xl overflow-auto md:px-8 flex flex-col items-center justify-center ${
+        isDark == true ? " dark-primary text-white" : " bg-stone-100 text-black"
+      }`}
+    >
       <div
         id="chat-container"
         className="w-full h-[200px] overflow-scroll flex flex-col"
@@ -100,30 +108,37 @@ const ContactForm = () => {
             }`}
           >
             <div className="chat-header">
-              <span className="mx-2 text-black">{message.sender}</span>
-              <time className="text-xs text-black opacity-50">
-                {message.timestamp}
-              </time>
+              <span className="mx-2 ">{message.sender}</span>
+              <time className="text-xs opacity-50">{message.timestamp}</time>
             </div>
             <div
               className={`chat-bubble text-xl ${
                 message.sender === "you"
                   ? "user bg-blue-500 text-white self-end"
-                  : "owner bg-stone-200 text-black self-start"
+                  : `{owner   self-start ${
+                      isDark == true
+                        ? " bg-white bg-opacity-15 text-white"
+                        : "bg-stone-200 text-black"
+                    }`
+              }
               }`}
             >
               {message.content}
             </div>
 
             {message.sender === "you" ? (
-              <div className="chat-footer text-black opacity-50">Delivered</div>
+              <div className="chat-footer opacity-50">Delivered</div>
             ) : (
               ""
             )}
           </div>
         ))}
       </div>
-      <div className="flex items-center w-full mt-2 h-12 border-2 rounded-full bg-transparent">
+      <div
+        className={`flex items-center w-full mt-2 h-12 border-2 rounded-full bg-transparent ${
+          isDark == true ? " opacity-45" : " opacity-100"
+        }`}
+      >
         <a
           href="mailto:pvks5423@gmail.com"
           className=" text-gray-400 h-full mx-2 flex items-center justify-center hover:text-blue-500 tooltip tooltip-right"

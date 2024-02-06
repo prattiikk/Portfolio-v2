@@ -36,7 +36,7 @@ const Hero = ({ toggleDarkMode }) => {
           <Upcoming />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 aspect-square lg:w-auto">
-          <ModeSwitchBtn toggleDarkMode={toggleDarkMode} />
+          <Upcoming />
         </div>
       </div>
 
@@ -78,7 +78,7 @@ const Hero = ({ toggleDarkMode }) => {
         </div>
 
         <div className="col-span-1 md:row-start-3 lg:row-start-2 row-span-1 lg:col-start-1 aspect-square">
-          <Upcoming />
+          <PhotoGallery />
         </div>
 
         <div className="col-span-1 row-span-1 md:col-span-2 md:row-start-4 lg:row-start-2 lg:col-start-2 aspect-square md:aspect-auto">
@@ -93,7 +93,7 @@ const Hero = ({ toggleDarkMode }) => {
           <ContactForm />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-1 lg:col-start-3 aspect-square relative">
-          <PhotoGallery />
+          <ModeSwitchBtn toggleDarkMode={toggleDarkMode} />
         </div>
         <div className="col-span-1 md:row-start-2 lg:row-start-1 row-span-1 lg:col-start-4 aspect-square">
           <AudioPlayer />

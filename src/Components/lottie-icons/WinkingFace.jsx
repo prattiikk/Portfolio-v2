@@ -26,9 +26,7 @@ const WinkinFace = () => {
   return (
     <div
       id="wink-container"
-      className={`rounded-3xl shadow-xl flex justify-center items-center ${
-        isDark == true ? "bg-dark-primary text-white" : " bg-light-primary"
-      }`}
+      className={`rounded-3xl shadow-xl flex justify-center items-center light-primary`}
     ></div>
   );
 };
