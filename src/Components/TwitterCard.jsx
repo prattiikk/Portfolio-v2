@@ -36,7 +36,8 @@ const TwitterCard = () => {
             className={`${isDark == true ? " text-white" : " text-black"} `}
           >
             {/* Chaos: my favorite coding language. */}
-            My best ideas always hit me when I'm on the toilet seat, man!
+            {/* My best ideas always hit me when I'm on the toilet seat, man! */}
+            Read my mid tweets here ....
           </span>
         </div>
         <div className="row-span-1 p-2">
