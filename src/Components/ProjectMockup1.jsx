@@ -12,26 +12,24 @@ const ProjectMockup1 = () => {
 
   return (
     <div
-      className={`relative w-full h-[600px] overflow-hidden  shadow-xl rounded-3xl bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 ${
-        isFocused ? "focused" : ""
-      }`}
+      className={`relative w-full h-[600px] overflow-hidden  shadow-xl rounded-3xl bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400 ${isFocused ? "focused" : ""
+        }`}
       onClick={handleLinkClick}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
     >
       <div
-        className={`w-full h-full object-contain overflow-y-scroll rounded-3xl -rotate-45 transform ${
-          isFocused
+        className={`w-full h-full object-contain overflow-y-scroll rounded-3xl -rotate-45 transform ${isFocused
             ? "rotate-0 translate-x-0"
             : "hover:rotate-0 translate-x-3/4 hover:translate-x-0"
-        } transition-transform duration-500 ease-in-out`}
+          } transition-transform duration-500 ease-in-out`}
       >
         <img src={spelltreeMockup} alt="project mockup" />
       </div>
 
       <div className="absolute bottom-0 left-0 mb-2 ml-2 ">
         <div className="tooltip bg-white p-2 rounded-full text-black">
-          <span className="tooltiptext">shell-tree.vercel.app </span>
+          <span className="tooltiptext"><a href="https://spell-tree.vercel.app/">spell-tree.vercel.app</a></span>
           🌐
         </div>
       </div>

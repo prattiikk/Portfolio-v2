@@ -12,7 +12,7 @@ const ProjectMockup2 = () => {
       </div>
       <div className="absolute bottom-0 left-0 mb-2 ml-2">
         <div className="tooltip bg-white p-2 rounded-full text-black">
-          <span className="tooltiptext">rizz-api.vercel.app </span>
+          <span className="tooltiptext"><a href="https://rizz-api.vercel.app/">rizz-api.vercel.app/</a> </span>
           <a href="#" onClick={handleLinkClick}>
             🌐
           </a>
